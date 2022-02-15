@@ -24,7 +24,7 @@
           }
         }
       ],
-      "_postman_id": "8c38b982-b69b-4935-b36e-3f5d4d56b325",
+      "id": "8c38b982-b69b-4935-b36e-3f5d4d56b325",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -54,7 +54,7 @@
           }
         }
       ],
-      "_postman_id": "c3278ee2-7705-4902-bc48-3c646f1b3a83",
+      "id": "c3278ee2-7705-4902-bc48-3c646f1b3a83",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -63,10 +63,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "[\n    {\n        \"userId\": 1,\n        \"id\": 101,\n        \"title\": \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\",\n        \"body\": \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\n    }\n]",
-          "options": {
-            "raw": {}
-          }
+          "raw": "[\n    {\n        \"userId\": 1,\n        \"id\": 101,\n        \"title\": \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\",\n        \"body\": \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\n    }\n]"
         },
         "url": "{{url}}/posts"
       },
@@ -89,7 +86,7 @@
           }
         }
       ],
-      "_postman_id": "b3574da2-6d12-45ea-8922-862c9f3e57c6",
+      "id": "b3574da2-6d12-45ea-8922-862c9f3e57c6",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -98,10 +95,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"userId\": 1,\n    \"id\": 102,\n    \"title\": \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\",\n    \"body\": \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\n}",
-          "options": {
-            "raw": {}
-          }
+          "raw": "{\n    \"userId\": 1,\n    \"id\": 102,\n    \"title\": \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\",\n    \"body\": \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\n}"
         },
         "url": "{{url}}/posts/{{post_number}}"
       },
@@ -126,7 +120,7 @@
           }
         }
       ],
-      "_postman_id": "b1ea98e8-2de7-4d95-a85d-438511e93c6d",
+      "id": "b1ea98e8-2de7-4d95-a85d-438511e93c6d",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -162,7 +156,7 @@
           }
         }
       ],
-      "_postman_id": "c956fbfc-0a65-4fd3-9fab-8801cb429dbb",
+      "id": "c956fbfc-0a65-4fd3-9fab-8801cb429dbb",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -171,13 +165,10 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "",
-          "options": {
-            "raw": {}
-          }
+          "raw": ""
         },
         "url": {
-          "raw": "{{url}}/comments?postId=1",
+          "raw": "{{url}}/comments?postId={{post_number}}",
           "host": [
             "{{url}}"
           ],
@@ -187,7 +178,7 @@
           "query": [
             {
               "key": "postId",
-              "value": "1"
+              "value": "{{post_number}}"
             }
           ]
         }
@@ -223,7 +214,7 @@
           }
         }
       ],
-      "_postman_id": "9d36d0cd-a71e-49dd-9f3a-edca570888f5",
+      "id": "9d36d0cd-a71e-49dd-9f3a-edca570888f5",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -232,10 +223,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "[\n    {\n        \"postId\": postId,\n        \"id\": 1001,\n        \"name\": \"id labore ex et quam laborum\",\n        \"email\": \"Eliseo@gardner.biz.com\",\n        \"body\": \"laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium\"\n    }\n\n]",
-          "options": {
-            "raw": {}
-          }
+          "raw": "[\n    {\n        \"postId\": postId,\n        \"id\": 1001,\n        \"name\": \"id labore ex et quam laborum\",\n        \"email\": \"Eliseo@gardner.biz.com\",\n        \"body\": \"laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium\"\n    }\n\n]"
         },
         "url": "{{url}}/comments"
       },
@@ -260,7 +248,7 @@
           }
         }
       ],
-      "_postman_id": "3252004a-262d-4193-876b-f89d1d8dc44b",
+      "id": "3252004a-262d-4193-876b-f89d1d8dc44b",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -288,7 +276,7 @@
           }
         }
       ],
-      "_postman_id": "c8316da2-e95b-4d42-acae-49cddf576795",
+      "id": "c8316da2-e95b-4d42-acae-49cddf576795",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -297,10 +285,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "[\n    {\n        \"postId\": 1,\n        \"id\": 1,\n        \"name\": \"New name of comment,\n        \"email\": \"Eliseo@gardner.biz\",\n        \"body\": \"laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium\"\n    }\n]",
-          "options": {
-            "raw": {}
-          }
+          "raw": "[\n    {\n        \"postId\": 1,\n        \"id\": 1,\n        \"name\": \"New name of comment,\n        \"email\": \"Eliseo@gardner.biz\",\n        \"body\": \"laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium\"\n    }\n]"
         },
         "url": "{{url}}/comments/{{comment_to_update}}"
       },
@@ -336,31 +321,31 @@
   ],
   "variable": [
     {
-      "id": "d457fe8a-e70d-41a5-8ee0-afe68cd8dd36",
+      "id": "0c816018-cef0-4d98-be73-3ccb2987cb27",
       "key": "postId",
       "value": "501",
       "type": "string"
     },
     {
-      "id": "1201e51b-c923-4d70-a359-e838dc35d460",
+      "id": "cb27d819-aa89-4034-89d8-6ac5415964b9",
       "key": "url",
       "value": "https://jsonplaceholder.typicode.com",
       "type": "string"
     },
     {
-      "id": "74714816-b3ad-4e7d-974d-4c61db54fafe",
+      "id": "b1856acc-d8c1-4d0f-b9c8-d1ce79a378c7",
       "key": "post_number",
       "value": "1",
       "type": "string"
     },
     {
-      "id": "6e7b6342-51dd-49ae-aa32-9a35af9190f2",
+      "id": "abfa2052-a8d6-4b1f-9853-4be960fa4b87",
       "key": "comment_to_update",
       "value": "1",
       "type": "string"
     },
     {
-      "id": "7f44b06f-4409-44e5-b319-e601d78eb43b",
+      "id": "b4b6ed45-c7cc-4d9b-a222-d710796d0d4c",
       "key": "comment_to_delete",
       "value": "1001",
       "type": "string"

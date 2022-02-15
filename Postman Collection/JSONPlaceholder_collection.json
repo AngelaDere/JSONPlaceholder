@@ -127,7 +127,7 @@
       "request": {
         "method": "DELETE",
         "header": [],
-        "url": "{{url}}/1"
+        "url": "{{url}}/{{post_number}}"
       },
       "response": []
     },
@@ -321,31 +321,31 @@
   ],
   "variable": [
     {
-      "id": "724c7a11-c431-4bff-b8c1-abfb2b90b083",
+      "id": "10840685-892c-46f6-9d2d-9e28dd96b434",
       "key": "postId",
       "value": "501",
       "type": "string"
     },
     {
-      "id": "4506293d-a21e-4507-9a02-e2860e4a33b7",
+      "id": "6c176ac5-c527-47ae-98d9-d47f4e1a28b9",
       "key": "url",
       "value": "https://jsonplaceholder.typicode.com",
       "type": "string"
     },
     {
-      "id": "f56b855b-fee9-4f10-a5fe-c03cb4f509f2",
+      "id": "65b5f30f-2909-4861-b91f-d696196543e9",
       "key": "post_number",
       "value": "1",
       "type": "string"
     },
     {
-      "id": "0c5bd731-2e3f-4a76-be09-00537569ac5b",
+      "id": "71cbab8a-f803-4599-a014-e16c8e227e82",
       "key": "comment_to_update",
       "value": "1",
       "type": "string"
     },
     {
-      "id": "09056358-87eb-4798-8a67-8fe8cdb97577",
+      "id": "b08dc686-8318-4e38-b772-e324e313a0c3",
       "key": "comment_to_delete",
       "value": "1001",
       "type": "string"

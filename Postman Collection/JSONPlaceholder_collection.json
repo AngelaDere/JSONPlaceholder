@@ -168,7 +168,7 @@
           "raw": ""
         },
         "url": {
-          "raw": "{{url}}/comments?postId=1",
+          "raw": "{{url}}/comments?postId={{post_number}}",
           "host": [
             "{{url}}"
           ],

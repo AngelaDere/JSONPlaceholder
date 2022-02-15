@@ -296,7 +296,7 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "343bf1ce-ff5c-401d-acca-d1a101528ce2",
+        "id": "c0e0ad17-4a4f-4856-b4e7-b77e29301d21",
         "type": "text/javascript",
         "exec": [
           "console.log(\"Tests started...\")"
@@ -306,7 +306,7 @@
     {
       "listen": "test",
       "script": {
-        "id": "ecaf1cc0-3d8f-4ca6-b68a-8f4863d80c84",
+        "id": "a76873d0-7df5-4487-a171-39edb31b47cf",
         "type": "text/javascript",
         "exec": [
           "pm.test(\"Response time is less than 300ms\", function () {",
@@ -321,15 +321,33 @@
   ],
   "variable": [
     {
-      "id": "a8902d8e-e19c-4734-ad39-78f25b31e046",
+      "id": "724c7a11-c431-4bff-b8c1-abfb2b90b083",
       "key": "postId",
       "value": "501",
       "type": "string"
     },
     {
-      "id": "7a8f6feb-3c12-4826-9d13-4ed3718d7494",
+      "id": "4506293d-a21e-4507-9a02-e2860e4a33b7",
       "key": "url",
       "value": "https://jsonplaceholder.typicode.com",
+      "type": "string"
+    },
+    {
+      "id": "f56b855b-fee9-4f10-a5fe-c03cb4f509f2",
+      "key": "post_number",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "id": "0c5bd731-2e3f-4a76-be09-00537569ac5b",
+      "key": "comment_to_update",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "id": "09056358-87eb-4798-8a67-8fe8cdb97577",
+      "key": "comment_to_delete",
+      "value": "1001",
       "type": "string"
     }
   ]

@@ -287,7 +287,7 @@
           "mode": "raw",
           "raw": "[\n    {\n        \"postId\": 1,\n        \"id\": 1,\n        \"name\": \"New name of comment,\n        \"email\": \"Eliseo@gardner.biz\",\n        \"body\": \"laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium\"\n    }\n]"
         },
-        "url": "{{url}}/comments/1"
+        "url": "{{url}}/comments/{{comment_to_update}}"
       },
       "response": []
     }
@@ -321,31 +321,31 @@
   ],
   "variable": [
     {
-      "id": "d5ffd470-437f-453e-a80e-44b09774cbdf",
+      "id": "c64e7ead-60da-4a3b-8aae-13166d01f52e",
       "key": "postId",
       "value": "501",
       "type": "string"
     },
     {
-      "id": "ee86616b-7d35-4e46-919f-d42726a6cff0",
+      "id": "62009e1f-6a7d-4983-a9dd-061f1325e83b",
       "key": "url",
       "value": "https://jsonplaceholder.typicode.com",
       "type": "string"
     },
     {
-      "id": "d213fd84-1690-4234-9ff8-7925dfe2e9e4",
+      "id": "c3393b3f-86e4-4a78-81a0-c4f55bc33dea",
       "key": "post_number",
       "value": "1",
       "type": "string"
     },
     {
-      "id": "fcf68c4e-16fd-4f44-82b9-bb302a942854",
+      "id": "0b1c49d9-9d19-4705-8532-54c907931134",
       "key": "comment_to_update",
       "value": "1",
       "type": "string"
     },
     {
-      "id": "8f0d3d2b-b574-4567-849d-98cbc3f94f94",
+      "id": "92737879-7aaf-4798-a5b8-a02fa0ed42a5",
       "key": "comment_to_delete",
       "value": "1001",
       "type": "string"

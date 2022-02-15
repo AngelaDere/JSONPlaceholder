@@ -1,0 +1,369 @@
+{
+  "info": {
+    "_postman_id": "14d28873-1249-46f6-9734-5b5c3239c09e",
+    "name": "JSON Placeholder",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get posts",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "7d5cb944-4bf9-4800-a1ee-97b3e109d0eb",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Body matches string\", function () {",
+              "    pm.expect(pm.response.text()).to.include(\"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\");",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "8c38b982-b69b-4935-b36e-3f5d4d56b325",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{url}}/posts"
+      },
+      "response": []
+    },
+    {
+      "name": "Create post",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "78f0fcaa-1caf-46c7-bd0e-38ae3c523764",
+            "exec": [
+              "pm.test(\"Successful POST request\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([201, 202]);",
+              "});",
+              "pm.test(\"Body contains string\",() => {",
+              "  pm.expect(pm.response.text()).to.include(\"101\");",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "c3278ee2-7705-4902-bc48-3c646f1b3a83",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n    {\n        \"userId\": 1,\n        \"id\": 101,\n        \"title\": \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\",\n        \"body\": \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\n    }\n]",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "{{url}}/posts"
+      },
+      "response": []
+    },
+    {
+      "name": "Put post id=1",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "9a7b124d-1bb1-4778-b9ca-09682d271d1e",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "b3574da2-6d12-45ea-8922-862c9f3e57c6",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"userId\": 1,\n    \"id\": 102,\n    \"title\": \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\",\n    \"body\": \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "{{url}}/posts/{{post_number}}"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete post id=1",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "db206cf4-69ad-44cf-bb30-c0784b4302ce",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Body is correct\", function () {",
+              "    pm.response.to.have.body(\"{}\");",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "b1ea98e8-2de7-4d95-a85d-438511e93c6d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{url}}/posts/{{post_number}}"
+      },
+      "response": []
+    },
+    {
+      "name": "Get comments",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "c078cd33-0510-430b-99ad-71f63c2de2e7",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Body matches string\", function () {",
+              "    pm.expect(pm.response.text()).to.include(\"Eliseo@gardner.biz\");",
+              "});",
+              "jsonData = pm.response.json()[0]",
+              "console.log(jsonData)",
+              "pm.test(\"Your test name\", function () {",
+              "    var jsonData = pm.response.json()[0];",
+              "    pm.expect(jsonData.postId).to.eql(1);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "c956fbfc-0a65-4fd3-9fab-8801cb429dbb",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": {
+          "raw": "{{url}}/comments?postId=1",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "comments"
+          ],
+          "query": [
+            {
+              "key": "postId",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create comment",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "551f1675-c9c3-49d9-a2e2-0845ca27a8bb",
+            "exec": [
+              "pm.test(\"Successful POST request\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([201, 202]);",
+              "});",
+              "pm.test(\"Body contains string\",() => {",
+              "  pm.expect(pm.response.text()).to.include(\"501\");",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "8d69f7c1-380b-40c8-b274-a715ef4c6878",
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "9d36d0cd-a71e-49dd-9f3a-edca570888f5",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n    {\n        \"postId\": postId,\n        \"id\": 1001,\n        \"name\": \"id labore ex et quam laborum\",\n        \"email\": \"Eliseo@gardner.biz.com\",\n        \"body\": \"laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium\"\n    }\n\n]",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "{{url}}/comments"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete comment id=1001",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "5d99817f-da4d-474b-b425-69d5e0172edc",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Body is correct\", function () {",
+              "    pm.response.to.have.body(\"{}\");",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "3252004a-262d-4193-876b-f89d1d8dc44b",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{url}}/comments/{{comment_to_delete}}"
+      },
+      "response": []
+    },
+    {
+      "name": "Update comment id=1",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "d5b3f033-c212-4328-b263-777186b8561c",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "c8316da2-e95b-4d42-acae-49cddf576795",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n    {\n        \"postId\": 1,\n        \"id\": 1,\n        \"name\": \"New name of comment,\n        \"email\": \"Eliseo@gardner.biz\",\n        \"body\": \"laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium\"\n    }\n]",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "{{url}}/comments/{{comment_to_update}}"
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "c0e0ad17-4a4f-4856-b4e7-b77e29301d21",
+        "type": "text/javascript",
+        "exec": [
+          "console.log(\"Tests started...\")"
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "a76873d0-7df5-4487-a171-39edb31b47cf",
+        "type": "text/javascript",
+        "exec": [
+          "pm.test(\"Response time is less than 300ms\", function () {",
+          "    pm.expect(pm.response.responseTime).to.be.below(300);",
+          "});",
+          "pm.test(\"Content-Type is present\", function () {",
+          "    pm.response.to.have.header(\"Content-Type\");",
+          "});"
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "d457fe8a-e70d-41a5-8ee0-afe68cd8dd36",
+      "key": "postId",
+      "value": "501",
+      "type": "string"
+    },
+    {
+      "id": "1201e51b-c923-4d70-a359-e838dc35d460",
+      "key": "url",
+      "value": "https://jsonplaceholder.typicode.com",
+      "type": "string"
+    },
+    {
+      "id": "74714816-b3ad-4e7d-974d-4c61db54fafe",
+      "key": "post_number",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "id": "6e7b6342-51dd-49ae-aa32-9a35af9190f2",
+      "key": "comment_to_update",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "id": "7f44b06f-4409-44e5-b319-e601d78eb43b",
+      "key": "comment_to_delete",
+      "value": "1001",
+      "type": "string"
+    }
+  ]
+}

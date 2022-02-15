@@ -97,7 +97,7 @@
           "mode": "raw",
           "raw": "{\n    \"userId\": 1,\n    \"id\": 102,\n    \"title\": \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\",\n    \"body\": \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\n}"
         },
-        "url": "{{url}}/posts/1"
+        "url": "{{url}}/posts/{{post_number}}"
       },
       "response": []
     },
@@ -321,31 +321,31 @@
   ],
   "variable": [
     {
-      "id": "10840685-892c-46f6-9d2d-9e28dd96b434",
+      "id": "f691873d-b271-4925-9a97-0da373dbf89f",
       "key": "postId",
       "value": "501",
       "type": "string"
     },
     {
-      "id": "6c176ac5-c527-47ae-98d9-d47f4e1a28b9",
+      "id": "b331778c-9cbf-4f66-8836-a7565f17053b",
       "key": "url",
       "value": "https://jsonplaceholder.typicode.com",
       "type": "string"
     },
     {
-      "id": "65b5f30f-2909-4861-b91f-d696196543e9",
+      "id": "5e206610-e3b7-4361-b584-9fd12d1bb0fe",
       "key": "post_number",
       "value": "1",
       "type": "string"
     },
     {
-      "id": "71cbab8a-f803-4599-a014-e16c8e227e82",
+      "id": "ef821e17-f781-4c21-a608-b1d32847c36c",
       "key": "comment_to_update",
       "value": "1",
       "type": "string"
     },
     {
-      "id": "b08dc686-8318-4e38-b772-e324e313a0c3",
+      "id": "7d015942-51cf-46d0-9718-4650a629f876",
       "key": "comment_to_delete",
       "value": "1001",
       "type": "string"
